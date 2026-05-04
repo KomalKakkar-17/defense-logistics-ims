@@ -84,7 +84,6 @@ DELIMITER ;
 
 -- ============================================================
 -- SECTION 2: FUNCTION -- GetCarbonScore
--- Owner: Raunak
 -- Purpose: Calculate total carbon emitted for a given request.
 --          Formula: SUM(Weight x CarbonFootprintPerUnit x quantity_requested)
 --          for every item in the request.
@@ -124,7 +123,6 @@ DELIMITER ;
 
 -- ============================================================
 -- SECTION 3: TRIGGER 2 -- Inventory Deduction
--- Owner: Komal
 -- Fires: AFTER INSERT on Inventory_Transaction
 -- Purpose: Automatically deduct QtyMoved from the source
 --          inventory record when a transaction is created.
@@ -178,7 +176,6 @@ DELIMITER ;
 
 -- ============================================================
 -- SECTION 4: STORED PROCEDURE -- ApproveRequest
--- Owner: Hiten
 -- Purpose: Approve a pending logistics request end-to-end:
 --   1. Validate request exists and is PENDING
 --   2. Update status to APPROVED
@@ -301,7 +298,6 @@ DELIMITER ;
 
 -- ============================================================
 -- SECTION 5: CURSOR -- ShowExpiringItems
--- Owner: Raunak
 -- Purpose: Loop through all inventory items expiring within
 --          30 days and display unit, item, quantity,
 --          expiry date, and days remaining.
