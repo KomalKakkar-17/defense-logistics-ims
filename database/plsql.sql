@@ -232,6 +232,8 @@ BEGIN
     UPDATE Logistics_Request
     SET    Status = 'APPROVED'
     WHERE  request_id = p_request_id;
+    
+    SAVEPOINT after_status_update; 
 
     -- Step 3: Find the source inventory to fulfill from
     -- We use the first matching inventory row in the supplier unit
@@ -260,6 +262,9 @@ BEGIN
         (source_inv_id, request_id, QtyMoved, TransactionDate)
     VALUES
         (v_source_inv, p_request_id, v_qty_needed, CURDATE());
+    
+    SAVEPOINT after_fulfillment;
+
 
     -- Step 5: Calculate carbon score using the function
     SET v_carbon_score = GetCarbonScore(p_request_id);

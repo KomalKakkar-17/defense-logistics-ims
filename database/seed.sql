@@ -172,7 +172,7 @@ INSERT INTO Unit (unit_name, location, totalCarbonBudget, MaxCapacity) VALUES
 -- Role  (currently 5 rows → add 5 more → 10)
 -- ─────────────────────────────────────────────
 INSERT INTO Role (role_name, ClearanceLevel) VALUES
-  ('Senior Commanding Officer', 6),
+  ('Senior Commanding Officer', 5),
   ('Intelligence Officer',      5),
   ('Supply Chain Manager',      3),
   ('Maintenance Technician',    2),
