@@ -1,4 +1,4 @@
-# Defense Logistics Inventory Management System
+# UCS310: Defense Logistics Inventory Management System
 
 
 A centralized, database-driven inventory management system for defense logistics — tracking weapons, vehicles, medical supplies, and equipment across military units, with built-in sustainability controls and carbon audit logging.
